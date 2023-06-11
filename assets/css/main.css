@@ -24,7 +24,7 @@
   font-weight: 300;
 }
 
-.navbar-item:hover,
+.navbar-item:hover a,
 .navbar-item-link:hover,
 .navbar-icon-link:hover {
   color: rgba(255, 255, 255, 0.7);
@@ -85,6 +85,7 @@
   z-index: 10;
   display: none;
   animation: fadeIn ease-in 0.3s;
+  will-change: opacity scale;
 }
 
 .navbar-qrcode:before {
@@ -93,7 +94,7 @@
   width: 100%;
   height: 20px;
   position: absolute;
-  top: -16px;
+  top: -10px;
   left: 0;
 }
 
@@ -137,7 +138,7 @@
 /* Navbar Notification */
 .navbar-notify {
   position: absolute;
-  top: 120%;
+  top: 110%;
   right: 0;
   background-color: var(--white-color);
   color: var(--text-color);
@@ -145,10 +146,14 @@
   box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.3);
   border-radius: 2px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  z-index: 11;
-  animation: notifyGrowth ease-in 0.3s;
-  transform-origin: calc(100% - 20px) top;
-  display: none;
+  z-index: 12;
+  transform: scale(0);
+  transition: all 0.3s;
+  transform-origin: calc(100% - 50px) top;
+}
+
+.navbar-item--show-notify:hover .navbar-notify {
+  transform: scale(1);
 }
 
 .navbar-notify::before {
@@ -198,9 +203,6 @@
   background-color: #f8f8f8;
 }
 
-.navbar-item--show-notify:hover .navbar-notify {
-  display: block;
-}
 
 .navbar-notify-item--view {
   background-color: #fff2ee;
