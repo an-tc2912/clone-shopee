@@ -6,6 +6,9 @@
   --primary-color: #ee4d2d;
   --star-gold-color: #FFCE3E;
   --facebook-icon-color: #1877f2;
+  --font-family: 'Roboto', sans-serif;
+  --font-size-primary: 1.4rem;
+  --hover-background-color: #fafafa
 }
 
 /* Reset CSS */
