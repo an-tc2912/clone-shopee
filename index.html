@@ -1,367 +1,530 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mua sắm trực tuyến hàng triệu sản phẩm ở tất cả ngành hàng. Giá tốt & Ưu đãi. Mua và bán online trong 30 giây. Shopee Đảm Bảo | Freeship Xtra | Voucher Xtra">
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Shopee Việt Nam | Mua và Bán Trên Ứng Dụng Di Động Hoặc Website</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/main.css">
-  <link rel="stylesheet" href="./assets/css/base.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <title>Demo-Shopee</title>
-</head>
-
-<body>
-  <div class="app">
-    <header class="header">
-      <div class="grid">
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="navbar-item navbar-item--seperate">
-              <a href="#" class="navbar-item-link">Kênh Người Bán</a>
-            </li>
-            <li class="navbar-item navbar-item--seperate">
-              <a href="#" class="navbar-item-link">Trở thành Người bán Shopee</a>
-            </li>
-            <li class="navbar-item navbar-item--seperate navbar-item--qr-show">
-              <a href="#" class="navbar-item-link">Tải ứng dụng</a>
-              <!-- Header QR Code -->
-              <div class="navbar-qrcode">
-                <img src="./assets/img/qr_code.png" alt="qr_code" class="navbar-qrcode__img">
-                <div class="qr-app">
-                  <a href="#" class="qr-app-link">
-                    <img src="./assets/img/qr_apple.png" alt="App Store" class="qr-app__image">
-                  </a>
-                  <a href="#" class="qr-app-link">
-                    <img src="./assets/img/qr_google.png" alt="Google Play" class="qr-app__image">
-                  </a>
-                  <a href="#" class="qr-app-link">
-                    <img src="./assets/img/qr_gallery.png" alt="AppGallery" class="qr-app__image">
-                  </a>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="grid">
+          <nav class="navbar">
+            <ul class="navbar-list">
+              <li class="navbar-item navbar-item--seperate">
+                <a href="#" class="navbar-item-link">Kênh Người Bán</a>
+              </li>
+              <li class="navbar-item navbar-item--seperate">
+                <a href="#" class="navbar-item-link">Trở thành Người bán Shopee</a>
+              </li>
+              <li class="navbar-item navbar-item--seperate navbar-item--qr-show">
+                <a href="#" class="navbar-item-link">Tải ứng dụng</a>
+                <!-- Header QR Code -->
+                <div class="navbar-qrcode">
+                  <img src="./assets/img/qr_code.png" alt="qr_code" class="navbar-qrcode__img" />
+                  <div class="qr-app">
+                    <a href="#" class="qr-app-link">
+                      <img src="./assets/img/qr_apple.png" alt="App Store" class="qr-app__image" />
+                    </a>
+                    <a href="#" class="qr-app-link">
+                      <img src="./assets/img/qr_google.png" alt="Google Play" class="qr-app__image" />
+                    </a>
+                    <a href="#" class="qr-app-link">
+                      <img src="./assets/img/qr_gallery.png" alt="AppGallery" class="qr-app__image" />
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="navbar-item reset-margin">
-              <a href="#" class="navbar-item-link">
-                <span class="navbar-item-link--modifier">Kết nối</span>
-              </a>
-            </li>
-            <li class="navbar-item">
-              <a href="https://www.facebook.com/ShopeeVN" class="navbar-icon-link" target="_blank">
-                <i class="navbar-icon-modifier fa-brands fa-facebook"></i>
-              </a>
-              <a href="https://www.instagram.com/Shopee_VN/" class="navbar-icon-link" target="_blank">
-                <i class="navbar-icon-modifier fa-brands fa-instagram"> </i>
-              </a>
-            </li>
-          </ul>
-          <ul class="navbar-list">
-            <!-- Show popup notification-->
-            <li class="navbar-item navbar-item--show-popup">
-              <a href="#" class="navbar-icon-link">
-                <i class="navbar-icon-modifier fa-regular fa-bell"></i>
-                Thông Báo
-              </a>
-              <!-- Show list notify when hover on notify item -->
-              <div class="navbar-popup-container navbar-notify">
-                <h3 class="navbar-notify-head">Thông Báo Mới Nhận</h3>
-                <ul class="navbar-popup-list">
-                  <li class="navbar-popup-item navbar-popup-item--view">
-                    <a href="#" class="navbar-popup-link">
-                      <div class="navbar-notify-img">
-                        <img src="./assets/img/notify_1.jfif" alt="Thông báo">
-                      </div>
-                      <div class="navbar-notify-info">
-                        <span class="navbar-notify-name">DEAL FLASH SALE NẠP THẺ GIẢM 15.000Đ</span>
-                        <span class="navbar-notify-description">
-                          🛍️ Loạt Voucher nạp thẻ, data đang chờ 🎯 Vào săn ngay, mã về tay
-                        </span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="navbar-popup-item">
-                    <a href="#" class="navbar-popup-link">
-                      <div class="navbar-notify-img">
-                        <img src="./assets/img/notify_2.jfif" alt="Thông báo">
-                      </div>
-                      <div class="navbar-notify-info">
-                        <span class="navbar-notify-name">TẶNG BẠN 999K - ĐÓN HÈ RỰC RỠ</span>
-                        <span class="navbar-notify-description">
-                          Dành riêng cho Người dùng nhận được thông báo này 💥Cùng Shopee đón hè với cơ hội nhận
-                          Voucher 999.000Đ và nhiều giải thưởng hấp dẫn khác chỉ có tại Group Nghiện Shopee 👉Tham gia
-                          ngay TẠI ĐÂY!
-                        </span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="navbar-popup-item">
-                    <a href="#" class="navbar-popup-link">
-                      <div class="navbar-notify-img">
-                        <img src="./assets/img/notify_3.jfif" alt="Thông báo">
-                      </div>
-                      <div class="navbar-notify-info">
-                        <span class="navbar-notify-name">NHẬN 100 MÃ FREESHIP CẢ THÁNG</span>
-                        <span class="navbar-notify-description">
-                          💥 Chỉ 50.000Đ có ngay loạt mã Freeship 0Đ 🎁 Gói ưu đãi lớn, mua là hời luôn
-                        </span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="navbar-popup-item">
-                    <a href="#" class="navbar-popup-link">
-                      <div class="navbar-notify-img">
-                        <img src="./assets/img/notify_4.jfif" alt="Thông báo">
-                      </div>
-                      <div class="navbar-notify-info">
-                        <span class="navbar-notify-name">MUA SẮM HOÀN ĐẾN 200K XU</span>
-                        <span class="navbar-notify-description">💰 Voucher lớn tới 2 triệu đồng 👀 Xem ngay</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="navbar-popup-item">
-                    <a href="#" class="navbar-popup-link">
-                      <div class="navbar-notify-img">
-                        <img src="./assets/img/notify_5.jfif" alt="Thông báo">
-                      </div>
-                      <div class="navbar-notify-info">
-                        <span class="navbar-notify-name">💥Cơ hội của bạn đến rồi</span>
-                        <span class="navbar-notify-description">Cùng Shopee cho điểm trải nghiệm tham gia "gem" 🎮🎲 của
-                          bạn trên Shopee TẠI ĐÂY nhé!</span>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-                <div class="navbar-item-footer">
-                  <a href="#" class="navbar-item-footer-link"> Xem tất cả </a>
+              </li>
+              <li class="navbar-item reset-margin">
+                <a href="#" class="navbar-item-link">
+                  <span class="navbar-item-link--modifier">Kết nối</span>
+                </a>
+              </li>
+              <li class="navbar-item">
+                <a href="https://www.facebook.com/ShopeeVN" class="navbar-icon-link" target="_blank">
+                  <i class="navbar-icon-modifier fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/Shopee_VN/" class="navbar-icon-link" target="_blank">
+                  <i class="navbar-icon-modifier fa-brands fa-instagram"> </i>
+                </a>
+              </li>
+            </ul>
+            <ul class="navbar-list">
+              <!-- Show popup notification-->
+              <li class="navbar-item navbar-item--show-popup">
+                <a href="#" class="navbar-icon-link">
+                  <i class="navbar-icon-modifier fa-regular fa-bell"></i>
+                  Thông Báo
+                </a>
+                <!-- Show list notify when hover on notify item -->
+                <div class="navbar-popup-container navbar-notify">
+                  <h3 class="navbar-notify-head">Thông Báo Mới Nhận</h3>
+                  <ul class="navbar-popup-list">
+                    <li class="navbar-popup-item navbar-popup-item--view">
+                      <a href="#" class="navbar-popup-link">
+                        <div class="navbar-notify-img">
+                          <img src="./assets/img/notify_1.jfif" alt="Thông báo" />
+                        </div>
+                        <div class="navbar-notify-info">
+                          <span class="navbar-notify-name">DEAL FLASH SALE NẠP THẺ GIẢM 15.000Đ</span>
+                          <span class="navbar-notify-description">
+                            🛍️ Loạt Voucher nạp thẻ, data đang chờ 🎯 Vào săn ngay, mã về tay
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="navbar-popup-item">
+                      <a href="#" class="navbar-popup-link">
+                        <div class="navbar-notify-img">
+                          <img src="./assets/img/notify_2.jfif" alt="Thông báo" />
+                        </div>
+                        <div class="navbar-notify-info">
+                          <span class="navbar-notify-name">TẶNG BẠN 999K - ĐÓN HÈ RỰC RỠ</span>
+                          <span class="navbar-notify-description">
+                            Dành riêng cho Người dùng nhận được thông báo này 💥Cùng Shopee đón hè với cơ hội nhận
+                            Voucher 999.000Đ và nhiều giải thưởng hấp dẫn khác chỉ có tại Group Nghiện Shopee 👉Tham gia
+                            ngay TẠI ĐÂY!
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="navbar-popup-item">
+                      <a href="#" class="navbar-popup-link">
+                        <div class="navbar-notify-img">
+                          <img src="./assets/img/notify_3.jfif" alt="Thông báo" />
+                        </div>
+                        <div class="navbar-notify-info">
+                          <span class="navbar-notify-name">NHẬN 100 MÃ FREESHIP CẢ THÁNG</span>
+                          <span class="navbar-notify-description">
+                            💥 Chỉ 50.000Đ có ngay loạt mã Freeship 0Đ 🎁 Gói ưu đãi lớn, mua là hời luôn
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="navbar-popup-item">
+                      <a href="#" class="navbar-popup-link">
+                        <div class="navbar-notify-img">
+                          <img src="./assets/img/notify_4.jfif" alt="Thông báo" />
+                        </div>
+                        <div class="navbar-notify-info">
+                          <span class="navbar-notify-name">MUA SẮM HOÀN ĐẾN 200K XU</span>
+                          <span class="navbar-notify-description">💰 Voucher lớn tới 2 triệu đồng 👀 Xem ngay</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="navbar-popup-item">
+                      <a href="#" class="navbar-popup-link">
+                        <div class="navbar-notify-img">
+                          <img src="./assets/img/notify_5.jfif" alt="Thông báo" />
+                        </div>
+                        <div class="navbar-notify-info">
+                          <span class="navbar-notify-name">💥Cơ hội của bạn đến rồi</span>
+                          <span class="navbar-notify-description"
+                            >Cùng Shopee cho điểm trải nghiệm tham gia "gem" 🎮🎲 của bạn trên Shopee TẠI ĐÂY nhé!</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="navbar-item-footer">
+                    <a href="#" class="navbar-item-footer-link"> Xem tất cả </a>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="navbar-item">
-              <a href="#" class="navbar-icon-link">
-                <i class="navbar-icon-modifier fa-regular fa-circle-question"></i>
-                Hỗ Trợ
-              </a>
-            </li>
-            <!-- Show popup language-->
-            <li class="navbar-item navbar-item--show-popup">
-              <a href="#" class="navbar-icon-link">
-                <i class="navbar-icon-modifier fa-solid fa-globe"></i>
-                Tiếng Việt
-              </a>
-              <a href="#" class="navbar-icon-link">
-                <i class="navbar-icon-modifier fa-solid fa-chevron-down fa-xs"></i>
-              </a>
-              <div class="navbar-popup-container navbar-popup-language">
-                <ul class="navbar-popup-list">
-                  <li class="navbar-popup-item">
-                    <a href="#" class="navbar-popup-link navbar-language"> Tiếng Việt </a>
-                  </li>
-                  <li class="navbar-popup-item">
-                    <a href="#" class="navbar-popup-link navbar-language"> English </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <!-- <li class="navbar-item navbar-item--seperate">
+              </li>
+              <li class="navbar-item">
+                <a href="#" class="navbar-icon-link">
+                  <i class="navbar-icon-modifier fa-regular fa-circle-question"></i>
+                  Hỗ Trợ
+                </a>
+              </li>
+              <!-- Show popup language-->
+              <li class="navbar-item navbar-item--show-popup">
+                <a href="#" class="navbar-icon-link">
+                  <i class="navbar-icon-modifier fa-solid fa-globe"></i>
+                  Tiếng Việt
+                </a>
+                <a href="#" class="navbar-icon-link">
+                  <i class="navbar-icon-modifier fa-solid fa-chevron-down fa-xs"></i>
+                </a>
+                <div class="navbar-popup-container navbar-popup-language">
+                  <ul class="navbar-popup-list">
+                    <li class="navbar-popup-item">
+                      <a href="#" class="navbar-popup-link navbar-language"> Tiếng Việt </a>
+                    </li>
+                    <li class="navbar-popup-item">
+                      <a href="#" class="navbar-popup-link navbar-language"> English </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- <li class="navbar-item navbar-item--seperate">
               <a href="#" class="navbar-item-link navbar-item-link--strong">Đăng Ký</a>
             </li>
             <li class="navbar-item navbar-item--seperate">
               <a href="#" class="navbar-item-link navbar-item-link--strong">Đăng Nhập</a>
             </li> -->
-            <!-- Show popup user-->
-            <li class="navbar-item navbar-item--show-popup">
-              <a href="#" class="navbar-icon-link navbar-user-container">
-                <i class="fa-regular fa-circle-user"></i>
-                <div class="navbar-item__username">ice2911</div>
-              </a>
-              <div class="navbar-popup-container navbar-popup-user">
-                <ul class="navbar-popup-list">
-                  <li class="navbar-popup-item">
-                    <a href="#" class="navbar-popup-link navbar-user"> Tài khoản của tôi </a>
+              <!-- Show popup user-->
+              <li class="navbar-item navbar-item--show-popup">
+                <a href="#" class="navbar-icon-link navbar-user-container">
+                  <i class="fa-regular fa-circle-user"></i>
+                  <div class="navbar-item__username text-ellipsis">ice2911</div>
+                </a>
+                <div class="navbar-popup-container navbar-popup-user">
+                  <ul class="navbar-popup-list">
+                    <li class="navbar-popup-item">
+                      <a href="#" class="navbar-popup-link navbar-user"> Tài khoản của tôi </a>
+                    </li>
+                    <li class="navbar-popup-item">
+                      <a href="#" class="navbar-popup-link navbar-user"> Đơn mua </a>
+                    </li>
+                    <li class="navbar-popup-item">
+                      <a href="#" class="navbar-popup-link navbar-user"> Đăng xuất </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-with-search">
+            <a href="/" class="header-logo-link">
+              <img src="assets/img/shopee_banner.svg" class="header-logo-img" alt="Shopee Banner" />
+            </a>
+            <div class="header-search-section">
+              <div class="header-search-box">
+                <!-- Search input -->
+                <div class="header-search-main">
+                  <!-- <form class="header-search-form" role="search" autocomplete="off">
+                </form> -->
+                  <input type="text" class="header-search-form__input" placeholder="#shopxuhuong HÀNG XỊN SALE 50%" />
+                  <div class="header-search-history">
+                    <h3 class="header-search-history-heading">Lịch sử tìm kiếm</h3>
+                    <ul class="header-search-history__list">
+                      <li class="header-search-history__item">
+                        <a href="#" class="header-search-history__link">Điện thoại</a>
+                      </li>
+                      <li class="header-search-history__item">
+                        <a href="#" class="header-search-history__link">Máy tính bảng</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Search button -->
+                <div class="header-search-selector">
+                  <span class="header-search-selector__label"> Trong Shopee </span>
+                  <i class="fa-solid fa-angle-down header-search-selector__icon"></i>
+                  <!-- Dropdown search history -->
+                  <div class="header-search-wrapper">
+                    <ul class="header-search-option">
+                      <li class="header-search-option-item">
+                        <span>Trong Thiết Bị Điện Tử</span>
+                        <i class="fa-solid fa-check"></i>
+                      </li>
+                      <li class="header-search-option-item header-search-option-item--active">
+                        <span>Trong Shopee</span>
+                        <i class="fa-solid fa-check"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Button search -->
+                <div class="header-search-icon">
+                  <button class="header-search-icon__btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- Search suggest -->
+              <div class="header-search-suggest">
+                <ul class="header-search-suggest__list">
+                  <li class="header-search-suggest__item">
+                    <a href="#" class="header-search-suggest__link">Loa Bluetooth</a>
                   </li>
-                  <li class="navbar-popup-item">
-                    <a href="#" class="navbar-popup-link navbar-user"> Đơn mua </a>
+                  <li class="header-search-suggest__item">
+                    <a href="#" class="header-search-suggest__link">Tay Cầm Chơi Game</a>
                   </li>
-                  <li class="navbar-popup-item">
-                    <a href="#" class="navbar-popup-link navbar-user"> Đăng xuất </a>
+                  <li class="header-search-suggest__item">
+                    <a href="#" class="header-search-suggest__link">Android TV</a>
+                  </li>
+                  <li class="header-search-suggest__item">
+                    <a href="#" class="header-search-suggest__link">Apple Airpods</a>
                   </li>
                 </ul>
               </div>
-            </li>
-          </ul>
-        </nav>
-        <div class="header-with-search">
-          <a href="/" class="header-logo-link">
-            <img src="assets/img/shopee_banner.svg" class="header-logo-img" alt="Shopee Banner">
-          </a>
-          <div class="header-search-section">
-            <div class="header-search-box">
-              <!-- Search input -->
-              <div class="header-search-main">
-                <!-- <form class="header-search-form" role="search" autocomplete="off">
-                </form> -->
-                <input type="text" class="header-search-form__input" placeholder="#shopxuhuong HÀNG XỊN SALE 50%">
-                <div class="header-search-history">
-                  <h3 class="header-search-history-heading">Lịch sử tìm kiếm</h3>
-                  <ul class="header-search-history__list">
-                    <li class="header-search-history__item">
-                      <a href="#" class="header-search-history__link">Điện thoại</a>
+            </div>
+            <!-- Cart layout -->
+            <div class="header-cart-wrapper">
+              <div class="header-cart-main">
+                <a href="#" class="header-cart-link">
+                  <i class="fa-solid fa-cart-shopping fa-xl header-cart-link__icon"></i>
+                </a>
+                <div class="navbar-popup-container header-cart-list header-cart-list--filled-cart">
+                  <!-- Cart dropdown -->
+                  <!-- Empty cart -->
+                  <!-- <div class="navbar-popup-container header-cart-list header-cart-list--empty-cart"> -->
+                  <img src="./assets/img/cart_empty.png" class="header-cart-list__empty-img" alt="Empty Product" />
+                  <span class="header-cart-list__empty-notify"> Chưa Có Sản Phẩm </span>
+                  <!-- Filled cart -->
+                  <h3 class="header-cart-heading">Sản Phẩm Mới Thêm</h3>
+                  <ul class="header-cart-shopping-list">
+                    <li class="header-cart-shoping-list__item">
+                      <img
+                        src="./assets/img/item_cart1.jfif"
+                        class="header-cart-shopping-list__img"
+                        alt="Tivi Xiaomi EA43" />
+                      <div class="header-cart-shopping-list__info">
+                        <div class="header-cart-shopping-list__description">
+                          Tivi Xiaomi EA43 55 65 75 inch Màn Hình 4k Android TV - Hàng Chính Hãng
+                        </div>
+                        <div class="header-cart-shopping-list__price">₫14.500.000</div>
+                      </div>
                     </li>
-                    <li class="header-search-history__item">
-                      <a href="#" class="header-search-history__link">Máy tính bảng</a>
+                    <li class="header-cart-shoping-list__item">
+                      <img
+                        src="./assets/img/item_cart2.jfif"
+                        class="header-cart-shopping-list__img"
+                        alt="Loa Bluetooth" />
+                      <div class="header-cart-shopping-list__info">
+                        <div class="header-cart-shopping-list__description">
+                          Loa Bluetooth không dây Marshall Tufton - full box nguyên seal 100%, Bảo hành 12 tháng
+                        </div>
+                        <div class="header-cart-shopping-list__price">₫6.969.000</div>
+                      </div>
+                    </li>
+                    <li class="header-cart-shoping-list__item">
+                      <img
+                        src="./assets/img/item_cart3.png"
+                        class="header-cart-shopping-list__img"
+                        alt="Màn Hình Dell UltraSharp U2422H" />
+                      <div class="header-cart-shopping-list__info">
+                        <div class="header-cart-shopping-list__description">
+                          Màn Hình Dell UltraSharp U2422H 23.8" FHD LED IPS USB-C - Hàng Chính Hãng
+                        </div>
+                        <div class="header-cart-shopping-list__price">₫6.300.000</div>
+                      </div>
+                    </li>
+                    <li class="header-cart-shoping-list__item">
+                      <img
+                        src="./assets/img/item_cart4.jfif"
+                        class="header-cart-shopping-list__img"
+                        alt="Màn Hình Dell S2721DS" />
+                      <div class="header-cart-shopping-list__info">
+                        <div class="header-cart-shopping-list__description">
+                          Màn Hình Dell S2721DS 27" QHD LED IPS 8ms 75Hz HDMI DP - Hàng Chính Hãng
+                        </div>
+                        <div></div>
+                        <div class="header-cart-shopping-list__price">₫6.490.000</div>
+                      </div>
                     </li>
                   </ul>
+                  <div class="header-cart-checking">
+                    <div class="header-cart-quantiy-goods">4 Thêm Hàng Vào Giỏ</div>
+                    <a href="#" class="btn btn--primary">Xem Giỏ hàng</a>
+                  </div>
                 </div>
-              </div>
-              <!-- Search button -->
-              <div class="header-search-selector">
-                <span class="header-search-selector__label"> Trong Shopee </span>
-                <i class="fa-solid fa-angle-down header-search-selector__icon"></i>
-                <!-- Dropdown search history -->
-                <div class="header-search-wrapper">
-                  <ul class="header-search-option">
-                    <li class="header-search-option-item">
-                      <span>Trong Thiết Bị Điện Tử</span>
-                      <i class="fa-solid fa-check"></i>
-                    </li>
-                    <li class="header-search-option-item header-search-option-item--active">
-                      <span>Trong Shopee</span>
-                      <i class="fa-solid fa-check"></i>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- Button search -->
-              <div class="header-search-icon">
-                <button class="header-search-icon__btn">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+                <span class="header-cart-quantity">4</span>
               </div>
             </div>
           </div>
-          <!-- Cart layout -->
-          <div class="header-cart-wrapper">
-            <div class="header-cart-main">
-              <a href="#" class="header-cart-link">
-                <i class="fa-solid fa-cart-shopping fa-xl header-cart-link__icon"></i>
-              </a>
-              <div class="navbar-popup-container header-cart-list header-cart-list--filled-cart">
-                <!-- Cart dropdown -->
-                <!-- Empty cart -->
-                <!-- <div class="navbar-popup-container header-cart-list header-cart-list--empty-cart"> -->
-                <img src="./assets/img/cart_empty.png" class="header-cart-list__empty-img" alt="Empty Product">
-                <span class="header-cart-list__empty-notify"> Chưa Có Sản Phẩm </span>
-                <!-- Filled cart -->
-                <h3 class="header-cart-heading">Sản Phẩm Mới Thêm</h3>
-                <ul class="header-cart-shopping-list">
-                  <li class="header-cart-shoping-list__item">
-                    <img src="./assets/img/item_cart1.jfif" class="header-cart-shopping-list__img"
-                      alt="Tivi Xiaomi EA43">
-                    <div class="header-cart-shopping-list__info">
-                      <div class="header-cart-shopping-list__description">
-                        Tivi Xiaomi EA43 55 65 75 inch Màn Hình 4k Android TV - Hàng Chính Hãng
-                      </div>
-                      <div class="header-cart-shopping-list__price">₫14.500.000</div>
-                    </div>
+        </div>
+      </header>
+      <div class="content-container">
+        <div class="grid">
+          <div class="grid__row">
+            <div class="grid__column-2">
+              <nav class="category">
+                <a class="category-heading">
+                  <i class="fa-solid fa-list fa-sm category-heading__icon"></i>
+                  Tất Cả Danh Mục
+                </a>
+                <ul class="category-list">
+                  <li class="category-item category-item--active">
+                    <a href="#" class="category-item__link">
+                      <!-- <i class="fa-solid fa-caret-right fa-sm category-item__link-icon"></i> -->
+                      Thiết Bị Điện Tử
+                    </a>
                   </li>
-                  <li class="header-cart-shoping-list__item">
-                    <img src="./assets/img/item_cart2.jfif" class="header-cart-shopping-list__img" alt="Loa Bluetooth">
-                    <div class="header-cart-shopping-list__info">
-                      <div class="header-cart-shopping-list__description">
-                        Loa Bluetooth không dây Marshall Tufton - full box nguyên seal 100%, Bảo hành 12 tháng
-                      </div>
-                      <div class="header-cart-shopping-list__price">₫6.969.000</div>
-                    </div>
+                  <li class="category-item">
+                    <a href="#" class="category-item__link">Thiết bị đeo thông minh</a>
                   </li>
-                  <li class="header-cart-shoping-list__item">
-                    <img src="./assets/img/item_cart3.png" class="header-cart-shopping-list__img"
-                      alt="Màn Hình Dell UltraSharp U2422H">
-                    <div class="header-cart-shopping-list__info">
-                      <div class="header-cart-shopping-list__description">
-                        Màn Hình Dell UltraSharp U2422H 23.8" FHD LED IPS USB-C - Hàng Chính Hãng
-                      </div>
-                      <div class="header-cart-shopping-list__price">₫6.300.000</div>
-                    </div>
+                  <li class="category-item">
+                    <a href="#" class="category-item__link">Phụ kiện tivi</a>
                   </li>
-                  <li class="header-cart-shoping-list__item">
-                    <img src="./assets/img/item_cart4.jfif" class="header-cart-shopping-list__img"
-                      alt="Màn Hình Dell S2721DS">
-                    <div class="header-cart-shopping-list__info">
-                      <div class="header-cart-shopping-list__description">
-                        Màn Hình Dell S2721DS 27" QHD LED IPS 8ms 75Hz HDMI DP - Hàng Chính Hãng
-                      </div>
-                      <div></div>
-                      <div class="header-cart-shopping-list__price">₫6.490.000</div>
-                    </div>
+                  <li class="category-item">
+                    <a href="#" class="category-item__link">Máy Game Console</a>
+                  </li>
+                  <li class="category-item">
+                    <a href="#" class="category-item__link">Phụ kiện Console</a>
+                  </li>
+                  <li class="category-item">
+                    <a href="#" class="category-item__link">Đĩa game</a>
+                  </li>
+                  <li class="category-item">
+                    <a href="#" class="category-item__link">
+                      Thêm
+                      <i class="fa-solid fa-angle-down fa-2xs"></i>
+                    </a>
                   </li>
                 </ul>
-                <div class="header-cart-checking">
-                  <div class="header-cart-quantiy-goods">4 Thêm Hàng Vào Giỏ</div>
-                  <a href="#" class="btn btn--primary">Xem Giỏ hàng</a>
+              </nav>
+            </div>
+            <div class="grid__column-10">
+              <div class="home-filter">
+                <span class="home-filter__label">Sắp xếp theo</span>
+                <button class="btn btn--primary home-filter__btn">Phổ Biến</button>
+                <button class="btn home-filter__btn">Mới Nhất</button>
+                <button class="btn home-filter__btn">Bán Chạy</button>
+                <div class="select-input">
+                  <span class="select-input__label">Giá</span>
+                  <i class="fa-solid fa-angle-down select-input__label-icon"></i>
+                  <ul class="select-input__list">
+                    <li class="select-input__item">
+                      <a href="#" class="select-input__link">Giá: Thấp đến Cao</a>
+                    </li>
+                    <li class="select-input__item">
+                      <a href="#" class="select-input__link">Giá: Cao đến Thấp</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="home-filter__page">
+                  <span class="home-filter__page-number">
+                    <span class="home-filter__page-current">1</span>
+                    /
+                    <span class="home-filter__page-total">14</span>
+                  </span>
+                  <div class="home-filter__page-control">
+                    <a href class="home-filter__page-link home-filter__page-link-disabled">
+                      <i class="fa-solid fa-angle-left home-filter__page-icon"></i>
+                    </a>
+                    <a href class="home-filter__page-link home-filter__page-link-next">
+                      <i class="fa-solid fa-angle-right home-filter__page-icon"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <span class="header-cart-quantity">4</span>
+              <!-- Product -->
+              <div class="home-product">
+                <div class="grid__row">
+                  <div class="grid__column-2-4">
+                    <div class="home-product-item">
+                      <div
+                        class="home-product-item__img"
+                        style="background-image: url(./assets/img/product_1.jpg)"></div>
+                      <div class="home-product-item__wrapper">
+                        <h3 class="home-product-item__name">
+                          Loa Bluetooth Marshall Kilburn II - Chip Qualcomm - Âm thanh tuyệt đỉnh - Bảo hành 12 tháng
+                        </h3>
+                        <div class="home-product-item__info">
+                          <div class="home-product-item__info-voucher">
+                            <img
+                              src="./assets/img/price_after.svg"
+                              class="home-product-item__info-voucher-after"
+                              alt="Voucher" />
+                            <div class="home-product-item__info-voucher-content text-ellipsis">
+                              Giảm ₫5k
+                            </div>
+                            <img
+                              src="./assets/img/price_before.svg"
+                              class="home-product-item__info-voucher-before"
+                              alt="Voucher" />
+                          </div>
+                          <div class="home-product-item__info-type text-ellipsis">#Shopdacbiet</div>
+                        </div>
+                        <div class="home-product-item__price">
+                          <div class="home-product-item__price-old text-ellipsis">₫6.000.000</div>
+                          <div class="home-product-item__price-current text-ellipsis text-primary-color">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            4.150.000
+                          </div>
+                        </div>
+                        <div class="home-product-item__action">
+                          <span class="home-product-item__rating">
+                            <i class="home-product-item__rating-gold fa-solid fa-star"></i>
+                            <i class="home-product-item__rating-gold fa-solid fa-star"></i>
+                            <i class="home-product-item__rating-gold fa-solid fa-star"></i>
+                            <i class="home-product-item__rating-gold fa-solid fa-star"></i>
+                            <i class="home-product-item__rating-gold fa-solid fa-star"></i>
+                          </span>
+                          <div class="home-product-item__total-sold">Đã bán 2,5k</div>
+                        </div>
+                        <div class="home-product-item__place">Hà Nội</div>
+                        <div class="home-product-item__favourite">
+                          <span class="text-ellipsis">Yêu thích</span>
+                        </div>
+                        <div class="home-product-item__sale-off">
+                          <span class="home-product-item__sale-percent">31%</span>
+                          <span class="home-product-item__sale-label">giảm</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
-    <div class="container"></div>
-    <footer></footer>
-  </div>
-  <!-- Modal Layout -->
-  <div class="register-modal modal">
-    <div class="modal__overlay"></div>
-    <div class="modal__body">
-      <!-- Register form -->
-      <div class="auth-form">
-        <div class="auth-form__container">
-          <div class="auth-form__header">
-            <h3 class="auth-form__heading">Đăng ký</h3>
-            <span class="auth-form__switch-btn">Đăng nhập</span>
-          </div>
-
-          <div class="auth-form__form">
-            <div class="auth-form__group">
-              <input type="text" class="auth-form__input" placeholder="Email của bạn">
+      <footer></footer>
+    </div>
+    <!-- Modal Layout -->
+    <div class="register-modal modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__body">
+        <!-- Register form -->
+        <div class="auth-form">
+          <div class="auth-form__container">
+            <div class="auth-form__header">
+              <h3 class="auth-form__heading">Đăng ký</h3>
+              <span class="auth-form__switch-btn">Đăng nhập</span>
             </div>
-            <div class="auth-form__group">
-              <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+
+            <div class="auth-form__form">
+              <div class="auth-form__group">
+                <input type="text" class="auth-form__input" placeholder="Email của bạn" />
+              </div>
+              <div class="auth-form__group">
+                <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn" />
+              </div>
+              <div class="auth-form__group">
+                <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu" />
+              </div>
             </div>
-            <div class="auth-form__group">
-              <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+
+            <div class="auth-form__aside">
+              <p class="auth-form__policy-text">
+                Bằng việc đăng kí, bạn đã đồng ý với Shopee về
+                <a href class="auth-form__text-link">Điều khoản dịch vụ</a>
+                &
+                <a href class="auth-form__text-link">Chính sách bảo mật</a>
+              </p>
+            </div>
+
+            <div class="auth-form__controls">
+              <button class="btn auth-form__controls-back btn--normal">TRỞ LẠI</button>
+              <button class="btn btn--primary">ĐĂNG KÍ</button>
             </div>
           </div>
 
-          <div class="auth-form__aside">
-            <p class="auth-form__policy-text">
-              Bằng việc đăng kí, bạn đã đồng ý với Shopee về
-              <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a>
-              &
-              <a href="" class="auth-form__text-link">Chính sách bảo mật</a>
-            </p>
+          <div class="auth-form__socials">
+            <a href class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+              <i class="auth-form__socials-icon fa-brands fa-facebook-square"></i>
+              <span class="auth-form__socials-title">Kết nối với Facebook</span>
+            </a>
+            <a href class="auth-form__socials--google btn btn--size-s btn--with-icon">
+              <i class="auth-form__socials-icon fa-brands fa-google"></i>
+              <span class="auth-form__socials-title">Kết nối với Google</span>
+            </a>
           </div>
-
-          <div class="auth-form__controls">
-            <button class="btn auth-form__controls-back btn--normal">TRỞ LẠI</button>
-            <button class="btn btn--primary">ĐĂNG KÍ</button>
-          </div>
-        </div>
-
-        <div class="auth-form__socials">
-          <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
-            <i class="auth-form__socials-icon fa-brands fa-facebook-square"></i>
-            <span class="auth-form__socials-title">Kết nối với Facebook</span>
-          </a>
-          <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
-            <i class="auth-form__socials-icon fa-brands fa-google"></i>
-            <span class="auth-form__socials-title">Kết nối với Google</span>
-          </a>
         </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>

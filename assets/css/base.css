@@ -4,7 +4,8 @@
   --text-color: #333;
   --border-color: #dbdbdb;
   --primary-color: #ee4d2d;
-  --star-gold-color: #FFCE3E;
+  --star-gold-color: #ffce3d;
+  --voucher-primary-color: #f69113;
   --facebook-icon-color: #1877f2;
   --font-family: 'Roboto', sans-serif;
   --font-size-primary: 1.4rem;
@@ -41,10 +42,6 @@ main {
   display: block;
 }
 
-* {
-  box-sizing: inherit;
-}
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -57,10 +54,9 @@ body {
   line-height: 1.4;
 }
 
-/* Grid body */
+/* Grid body Reponsive*/
 .grid {
   width: 1200px;
-  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -70,7 +66,36 @@ body {
 
 .grid__row {
   display: flex;
-  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.grid__column-2 {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 16.6667%;
+}
+
+.grid__column-2-4 {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 20%;
+}
+
+.grid__column-10 {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 83.3333%;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-primary-color {
+  color: var(--primary-color);
 }
 
 /* Keyframes */
@@ -151,6 +176,7 @@ body {
   justify-content: center;
   align-items: center;
   line-height: 1.6rem;
+  text-transform: capitalize;
 }
 
 .btn.btn--normal:hover {
@@ -172,4 +198,66 @@ body {
   cursor: default;
   background-color: #c3c3c3;
   color: #949494;
+}
+
+/* Selection */
+.select-input {
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 2px;
+  background-color: var(--white-color);
+  min-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.select-input__label {
+  font-size: 1.4rem;
+
+}
+
+.select-input__label-icon {
+  font-size: 1.4rem;
+  position: relative;
+  top: 1px;
+  color: rgb(85, 85, 85);
+}
+
+.select-input__list {
+  list-style: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 1px);
+  border-radius: 2px;
+  background-color: var(--white-color);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .05);
+  z-index: 12;
+  padding: 10px 0;
+  display: none;
+}
+
+.select-input:hover .select-input__list {
+  display: block;
+}
+
+.select-input__item {
+  display: flex;
+  align-items: center;
+
+}
+
+.select-input__link {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 7px 16px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.select-input__link:hover {
+  color: var(--primary-color);
 }
