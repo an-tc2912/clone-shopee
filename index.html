@@ -9,6 +9,8 @@
       content="Mua sắm trực tuyến hàng triệu sản phẩm ở tất cả ngành hàng. Giá tốt & Ưu đãi. Mua và bán online trong 30 giây. Shopee Đảm Bảo | Freeship Xtra | Voucher Xtra" />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/source-sans-pro" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -18,8 +20,8 @@
   <body>
     <div class="app">
       <header class="header">
-        <div class="grid">
-          <nav class="navbar">
+        <div class="grid wide">
+          <nav class="navbar hide-on-mobile-tablet">
             <ul class="navbar-list">
               <li class="navbar-item navbar-item--seperate">
                 <a href="#" class="navbar-item-link">Kênh Người Bán</a>
@@ -164,6 +166,7 @@
                   </ul>
                 </div>
               </li>
+              <!-- Modal -->
               <!-- <li class="navbar-item navbar-item--seperate">
               <a href="#" class="navbar-item-link navbar-item-link--strong">Đăng Ký</a>
             </li>
@@ -193,16 +196,18 @@
             </ul>
           </nav>
           <div class="header-with-search">
-            <a href="/" class="header-logo-link">
+            <label for="mobile-search-checkbox" class="header__mobile-search hide-on-pc">
+              <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+            </label>
+            <input type="checkbox" id="mobile-search-checkbox" class="header__seach-checkbox" hidden />
+            <a href="/" class="header-logo-link hide-on-tablet">
               <img src="assets/img/shopee_banner.svg" class="header-logo-img" alt="banner" />
             </a>
             <div class="header-search-section">
-              <div class="header-search-box">
+              <div class="header-search-box reset-margin-padding-on-mobile">
                 <!-- Search input -->
                 <div class="header-search-main">
-                  <!-- <form class="header-search-form" role="search" autocomplete="off">
-                </form> -->
-                  <input type="text" class="header-search-form__input" placeholder="#shopxuhuong HÀNG XỊN SALE 50%" />
+                  <input type="text" class="header-search-form__input reset-margin-padding-on-mobile" placeholder="Tìm kiếm sản phẩm" />
                   <div class="header-search-history">
                     <h3 class="header-search-history-heading">Lịch sử tìm kiếm</h3>
                     <ul class="header-search-history__list">
@@ -216,7 +221,7 @@
                   </div>
                 </div>
                 <!-- Search button -->
-                <div class="header-search-selector">
+                <div class="header-search-selector reset-margin-padding-on-mobile">
                   <span class="header-search-selector__label"> Trong Shopee </span>
                   <i class="fa-solid fa-angle-down header-search-selector__icon"></i>
                   <!-- Dropdown search history -->
@@ -241,7 +246,7 @@
                 </div>
               </div>
               <!-- Search suggest -->
-              <div class="header-search-suggest">
+              <div class="header-search-suggest hide-on-mobile-tablet">
                 <ul class="header-search-suggest__list">
                   <li class="header-search-suggest__item">
                     <a href="#" class="header-search-suggest__link">Loa Bluetooth</a>
@@ -322,12 +327,26 @@
             </div>
           </div>
         </div>
+        <ul class="header__sort-bar">
+          <li class="header__sort-item">
+            <a href="#" class="header__sort-link">Liên quan</a>
+          </li>
+          <li class="header__sort-item header__sort-item--active">
+            <a href="#" class="header__sort-link">Mới nhất</a>
+          </li>
+          <li class="header__sort-item">
+            <a href="#" class="header__sort-link">Bán chạy</a>
+          </li>
+          <li class="header__sort-item">
+            <a href="#" class="header__sort-link">Giá</a>
+          </li>
+        </ul>
       </header>
       <!-- Body content -->
       <div class="content-container">
-        <div class="grid">
-          <div class="grid__row grid__row--modifier">
-            <div class="grid__column-2">
+        <div class="grid wide">
+          <div class="row sm-gutter grid__row--modifier">
+            <div class="col l-2 m-0 c-0">
               <nav class="category">
                 <a class="category-heading">
                   <i class="fa-solid fa-list fa-sm category-heading__icon"></i>
@@ -336,7 +355,6 @@
                 <ul class="category-list">
                   <li class="category-item category-item--active">
                     <a href="#" class="category-item__link">
-                      <!-- <i class="fa-solid fa-caret-right fa-sm category-item__link-icon"></i> -->
                       Thiết Bị Điện Tử
                     </a>
                   </li>
@@ -364,8 +382,8 @@
                 </ul>
               </nav>
             </div>
-            <div class="grid__column-10">
-              <div class="home-filter">
+            <div class="col l-10 m-12 c-12">
+              <div class="home-filter hide-on-mobile-tablet">
                 <span class="home-filter__label">Sắp xếp theo</span>
                 <button class="btn btn--primary home-filter__btn">Phổ Biến</button>
                 <button class="btn home-filter__btn">Mới Nhất</button>
@@ -390,20 +408,20 @@
                   </span>
                   <div class="home-filter__page-control">
                     <a href="#" class="home-filter__page-link home-filter__page-link-disabled">
-                      <i class="fa-solid fa-angle-left home-filter__page-icon"></i>
+                      <i class="fa-solid fa-angle-left home-filter__page-icon fa-sm"></i>
                     </a>
                     <a href="#" class="home-filter__page-link home-filter__page-link-next">
-                      <i class="fa-solid fa-angle-right home-filter__page-icon"></i>
+                      <i class="fa-solid fa-angle-right home-filter__page-icon fa-sm"></i>
                     </a>
                   </div>
                 </div>
               </div>
               <!-- Product -->
               <div class="home-product">
-                <div class="grid__row">
+                <div class="row sm-gutter">
                   <!-- Row 1 -->
                   <!-- Item 1 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <a href="#" class="home-product-item">
                       <div class="home-product-item__img" style="background-image: url(./assets/img/product_1.jpg)"></div>
                       <div class="home-product-item__wrapper">
@@ -418,10 +436,12 @@
                           </div>
                           <div class="home-product-item__info-type text-ellipsis">#Shopdacbiet</div>
                         </div>
-                        <div class="home-product-item__price text-ellipsis">
-                          <span class="home-product-item__price-old home-product-item__price--line-through">₫6.000.000</span>
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-current flex-item-ellipsis text-primary-color">4.150.000</span>
+                        <div class="home-product-item__price">
+                          <span class="home-product-item__price-old text-ellipsis home-product-item__price--line-through">₫6.000.000</span>
+                          <div class="flex-item-ellipsis text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-current text-primary-color">4.150.000</span>
+                          </div>
                         </div>
                         <div class="home-product-item__action">
                           <span class="home-product-item__rating">
@@ -445,7 +465,7 @@
                     </a>
                   </div>
                   <!-- Item 2 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <a href="#" class="home-product-item">
                       <div class="home-product-item__img" style="background-image: url(./assets/img/product_2.jpg)"></div>
                       <div class="home-product-item__wrapper">
@@ -459,9 +479,11 @@
                           <div class="home-product-item__info-type text-ellipsis">#Shopdacbiet</div>
                         </div>
                         <div class="home-product-item__price text-ellipsis">
-                          <span class="home-product-item__price-old home-product-item__price--line-through">₫5.590.000</span>
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-current flex-item-ellipsis text-primary-color">3.800.000</span>
+                          <span class="home-product-item__price-old text-ellipsis home-product-item__price--line-through">₫5.590.000</span>
+                          <div class="flex-item-ellipsis text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-current text-primary-color">3.800.000</span>
+                          </div>
                         </div>
                         <div class="home-product-item__action">
                           <span class="home-product-item__rating">
@@ -485,7 +507,7 @@
                     </a>
                   </div>
                   <!-- Item 3 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <a href="#" class="home-product-item">
                       <div class="home-product-item__img" style="background-image: url(./assets/img/product_3.jpg)"></div>
                       <div class="home-product-item__wrapper">
@@ -498,12 +520,16 @@
                           </div>
                           <div class="home-product-item__info-type text-ellipsis">#Shopdacbiet</div>
                         </div>
-                        <div class="home-product-item__price text-ellipsis">
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-old text-primary-color">3.550.000</span>
+                        <div class="home-product-item__price">
+                          <div class="text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-old text-ellipsis text-primary-color">3.550.000</span>
+                          </div>
                           <span class="home-product-item__price--seperate">-</span>
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-current text-primary-color">3.990.000</span>
+                          <div class="flex-item-ellipsis text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-current text-primary-color">3.990.000</span>
+                          </div>
                         </div>
                         <div class="home-product-item__action">
                           <span class="home-product-item__rating">
@@ -527,7 +553,7 @@
                     </a>
                   </div>
                   <!-- Item 4 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <a href="#" class="home-product-item">
                       <div class="home-product-item__img" style="background-image: url(./assets/img/product_4.jpg)"></div>
                       <div class="home-product-item__wrapper">
@@ -541,10 +567,12 @@
                             <img src="./assets/img/price_before.svg" class="home-product-item__info-voucher-before" alt="voucher" />
                           </div>
                         </div>
-                        <div class="home-product-item__price text-ellipsis">
-                          <span class="home-product-item__price-old home-product-item__price--line-through">₫2.488.000</span>
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-current flex-item-ellipsis text-primary-color">4.150.000</span>
+                        <div class="home-product-item__price">
+                          <span class="home-product-item__price-old text-ellipsis home-product-item__price--line-through">₫2.488.000</span>
+                          <div class="flex-item-ellipsis text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-current text-primary-color">4.150.000</span>
+                          </div>
                         </div>
                         <div class="home-product-item__action">
                           <span class="home-product-item__rating">
@@ -568,7 +596,7 @@
                     </a>
                   </div>
                   <!-- Item 5 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <a href="#" class="home-product-item">
                       <div class="home-product-item__img" style="background-image: url(./assets/img/product_5.jpg)"></div>
                       <div class="home-product-item__wrapper">
@@ -581,12 +609,16 @@
                           </div>
                           <div class="home-product-item__info-type text-ellipsis">#Shopdacbiet</div>
                         </div>
-                        <div class="home-product-item__price text-ellipsis">
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-old flex-item-ellipsis text-primary-color">5.990.000</span>
+                        <div class="home-product-item__price">
+                          <div class="text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-old text-ellipsis text-primary-color">5.990.000</span>
+                          </div>
                           <span class="home-product-item__price--seperate"> - </span>
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-current text-primary-color">14.500.000</span>
+                          <div class="flex-item-ellipsis text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-current text-primary-color">14.500.000</span>
+                          </div>
                         </div>
                         <div class="home-product-item__action">
                           <span class="home-product-item__rating">
@@ -611,7 +643,7 @@
                   </div>
                   <!-- Row 2 -->
                   <!-- Item 1 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <a href="#" class="home-product-item">
                       <div class="home-product-item__img" style="background-image: url(./assets/img/product_1.jpg)"></div>
                       <div class="home-product-item__wrapper">
@@ -626,10 +658,12 @@
                           </div>
                           <div class="home-product-item__info-type text-ellipsis">#Shopdacbiet</div>
                         </div>
-                        <div class="home-product-item__price text-ellipsis">
-                          <span class="home-product-item__price-old home-product-item__price--line-through">₫6.000.000</span>
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-current flex-item-ellipsis text-primary-color">4.150.000</span>
+                        <div class="home-product-item__price">
+                          <span class="home-product-item__price-old text-ellipsis home-product-item__price--line-through">₫6.000.000</span>
+                          <div class="flex-item-ellipsis text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-current text-primary-color">4.150.000</span>
+                          </div>
                         </div>
                         <div class="home-product-item__action">
                           <span class="home-product-item__rating">
@@ -653,7 +687,7 @@
                     </a>
                   </div>
                   <!-- Item 2 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <a href="#" class="home-product-item">
                       <div class="home-product-item__img" style="background-image: url(./assets/img/product_2.jpg)"></div>
                       <div class="home-product-item__wrapper">
@@ -666,10 +700,12 @@
                           </div>
                           <div class="home-product-item__info-type text-ellipsis">#Shopdacbiet</div>
                         </div>
-                        <div class="home-product-item__price text-ellipsis">
-                          <span class="home-product-item__price-old home-product-item__price--line-through">₫5.590.000</span>
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-current flex-item-ellipsis text-primary-color">3.800.000</span>
+                        <div class="home-product-item__price">
+                          <span class="home-product-item__price-old text-ellipsis home-product-item__price--line-through">₫5.590.000</span>
+                          <div class="flex-item-ellipsis text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-current text-primary-color">3.800.000</span>
+                          </div>
                         </div>
                         <div class="home-product-item__action">
                           <span class="home-product-item__rating">
@@ -693,7 +729,7 @@
                     </a>
                   </div>
                   <!-- Item 3 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <a href="#" class="home-product-item">
                       <div class="home-product-item__img" style="background-image: url(./assets/img/product_3.jpg)"></div>
                       <div class="home-product-item__wrapper">
@@ -706,12 +742,16 @@
                           </div>
                           <div class="home-product-item__info-type text-ellipsis">#Shopdacbiet</div>
                         </div>
-                        <div class="home-product-item__price text-ellipsis">
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-old text-primary-color">3.550.000</span>
+                        <div class="home-product-item__price">
+                          <div class="text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-old text-ellipsis text-primary-color">3.550.000</span>
+                          </div>
                           <span class="home-product-item__price--seperate">-</span>
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-current text-primary-color">3.990.000</span>
+                          <div class="flex-item-ellipsis text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-current text-primary-color">3.990.000</span>
+                          </div>
                         </div>
                         <div class="home-product-item__action">
                           <span class="home-product-item__rating">
@@ -735,7 +775,7 @@
                     </a>
                   </div>
                   <!-- Item 4 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <a href="#" class="home-product-item">
                       <div class="home-product-item__img" style="background-image: url(./assets/img/product_4.jpg)"></div>
                       <div class="home-product-item__wrapper">
@@ -749,10 +789,12 @@
                             <img src="./assets/img/price_before.svg" class="home-product-item__info-voucher-before" alt="voucher" />
                           </div>
                         </div>
-                        <div class="home-product-item__price text-ellipsis">
-                          <span class="home-product-item__price-old home-product-item__price--line-through">₫2.488.000</span>
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-current flex-item-ellipsis text-primary-color">4.150.000</span>
+                        <div class="home-product-item__price">
+                          <span class="home-product-item__price-old text-ellipsis home-product-item__price--line-through">₫2.488.000</span>
+                          <div class="flex-item-ellipsis text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-current text-primary-color">4.150.000</span>
+                          </div>
                         </div>
                         <div class="home-product-item__action">
                           <span class="home-product-item__rating">
@@ -776,7 +818,7 @@
                     </a>
                   </div>
                   <!-- Item 5 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <a href="#" class="home-product-item">
                       <div class="home-product-item__img" style="background-image: url(./assets/img/product_5.jpg)"></div>
                       <div class="home-product-item__wrapper">
@@ -789,12 +831,16 @@
                           </div>
                           <div class="home-product-item__info-type text-ellipsis">#Shopdacbiet</div>
                         </div>
-                        <div class="home-product-item__price text-ellipsis">
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-old flex-item-ellipsis text-primary-color">5.990.000</span>
+                        <div class="home-product-item__price">
+                          <div class="text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-old text-ellipsis text-primary-color">5.990.000</span>
+                          </div>
                           <span class="home-product-item__price--seperate"> - </span>
-                          <span class="home-product-item__price-currency text-primary-color">₫</span>
-                          <span class="home-product-item__price-current text-primary-color">14.500.000</span>
+                          <div class="flex-item-ellipsis text-ellipsis">
+                            <span class="home-product-item__price-currency text-primary-color">₫</span>
+                            <span class="home-product-item__price-current text-primary-color">14.500.000</span>
+                          </div>
                         </div>
                         <div class="home-product-item__action">
                           <span class="home-product-item__rating">
@@ -819,35 +865,35 @@
                   </div>
                   <!-- Pagination -->
                   <ul class="pagination home-product__pagination">
-                    <li class="pagination-item pagination-item-left">
+                    <li class="pagination-item l-1 m-1 c-1 pagination-item-left">
                       <a href="#" class="pagination-item__link">
-                        <i class="pagination-item__icon fa-solid fa-angle-left"></i>
+                        <i class="pagination-item__icon fa-solid fa-angle-left fa-2xs"></i>
                       </a>
                     </li>
-                    <li class="pagination-item pagination-item--active">
+                    <li class="pagination-item l-1 m-1 c-1 pagination-item--active">
                       <a href="#" class="pagination-item__link">1</a>
                     </li>
-                    <li class="pagination-item">
+                    <li class="pagination-item l-1 m-1 c-1">
                       <a href="#" class="pagination-item__link">2</a>
                     </li>
-                    <li class="pagination-item">
+                    <li class="pagination-item l-1 m-1 c-1">
                       <a href="#" class="pagination-item__link">3</a>
                     </li>
-                    <li class="pagination-item">
+                    <li class="pagination-item l-1 m-1 c-1">
                       <a href="#" class="pagination-item__link">4</a>
                     </li>
-                    <li class="pagination-item">
+                    <li class="pagination-item l-1 m-1 c-1">
                       <a href="#" class="pagination-item__link">5</a>
                     </li>
-                    <li class="pagination-item">
+                    <li class="pagination-item l-1 m-1 c-1">
                       <a href="#" class="pagination-item__link pagination-item__link--disable">...</a>
                     </li>
-                    <li class="pagination-item">
+                    <li class="pagination-item l-1 m-1 c-1">
                       <a href="#" class="pagination-item__link">14</a>
                     </li>
-                    <li class="pagination-item pagination-item-right">
+                    <li class="pagination-item l-1 m-1 c-1 pagination-item-right">
                       <a href="#" class="pagination-item__link">
-                        <i class="pagination-item__icon fa-solid fa-angle-right"></i>
+                        <i class="pagination-item__icon fa-solid fa-angle-right fa-2xs"></i>
                       </a>
                     </li>
                   </ul>
@@ -858,9 +904,9 @@
         </div>
         <!-- Footer -->
         <footer>
-          <div class="grid">
-            <div class="grid__row">
-              <div class="grid__column-2-4">
+          <div class="grid wide footer__content">
+            <div class="row">
+              <div class="col l-2-4 m-6 c-6">
                 <h3 class="footer-heading">CHĂM SÓC KHÁCH HÀNG</h3>
                 <ul class="footer-list">
                   <li class="footer-item">
@@ -898,7 +944,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="grid__column-2-4">
+              <div class="col l-2-4 m-6 c-6">
                 <h3 class="footer-heading">VỀ SHOPEE</h3>
                 <ul class="footer-list">
                   <li class="footer-item">
@@ -930,7 +976,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="grid__column-2-4">
+              <div class="col l-2-4 m-6 c-12">
                 <h3 class="footer-heading">THANH TOÁN</h3>
                 <ul class="footer-list footer-list-img">
                   <li class="footer-item">
@@ -1033,7 +1079,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="grid__column-2-4">
+              <div class="col l-3 m-6 c-12">
                 <h3 class="footer-heading">THEO DÕI CHÚNG TÔI TRÊN</h3>
                 <ul class="footer-list">
                   <li class="footer-item">
@@ -1055,9 +1101,7 @@
                     </a>
                   </li>
                 </ul>
-              </div>
-              <div class="grid__column-2-4">
-                <h3 class="footer-heading">TẢI ỨNG DỤNG SHOPEE NGAY THÔI</h3>
+                <h3 class="footer-heading footer-heading-app">TẢI ỨNG DỤNG SHOPEE NGAY THÔI</h3>
                 <ul class="footer-list">
                   <li class="footer-item">
                     <!-- Header QR Code -->
@@ -1081,45 +1125,50 @@
                 </ul>
               </div>
               <!-- Author Copyright -->
-              <div class="footer-author">
-                <div class="footer-author__info">© 2023 Shopee. Tất cả các quyền được bảo lưu.</div>
-                <div class="footer-author-place">
-                  <ul class="footer-author-place-list">
-                    <li class="footer-author-place-item">Quốc gia & Khu vực:</li>
-                    <li class="footer-author-place-item">
-                      <a href="https://shopee.sg" class="footer-author-place-link">Singapore</a>
-                    </li>
-                    <li class="footer-author-place-item">
-                      <a href="https://shopee.co.id" class="footer-author-place-link">Indonesia</a>
-                    </li>
-                    <li class="footer-author-place-item">
-                      <a href="https://shopee.tw" class="footer-author-place-link">Đài Loan</a>
-                    </li>
-                    <li class="footer-author-place-item">
-                      <a href="https://shopee.co.th" class="footer-author-place-link">Thái Lan</a>
-                    </li>
-                    <li class="footer-author-place-item">
-                      <a href="https://shopee.com.my" class="footer-author-place-link">Malaysia</a>
-                    </li>
-                    <li class="footer-author-place-item">
-                      <a href="https://shopee.vn" class="footer-author-place-link">Việt Nam</a>
-                    </li>
-                    <li class="footer-author-place-item">
-                      <a href="https://shopee.ph" class="footer-author-place-link">Philippines</a>
-                    </li>
-                    <li class="footer-author-place-item">
-                      <a href="https://shopee.com.br" class="footer-author-place-link">Brazil</a>
-                    </li>
-                    <li class="footer-author-place-item">
-                      <a href="https://shopee.com.mx" class="footer-author-place-link">México</a>
-                    </li>
-                    <li class="footer-author-place-item">
-                      <a href="https://shopee.com.co" class="footer-author-place-link">Colombia</a>
-                    </li>
-                    <li class="footer-author-place-item">
-                      <a href="https://shopee.cl" class="footer-author-place-link">Chile</a>
-                    </li>
-                  </ul>
+
+              <div class="row footer-author">
+                <div class="col c-12 m-12 l-12">
+                  <div class="footer-author__info">© 2023 Shopee. Tất cả các quyền được bảo lưu.</div>
+                </div>
+                <div class="col c-0 m-0 l-12">
+                  <div class="footer-author-place">
+                    <ul class="footer-author-place-list">
+                      <li class="footer-author-place-item">Quốc gia & Khu vực:</li>
+                      <li class="footer-author-place-item">
+                        <a href="https://shopee.sg" class="footer-author-place-link">Singapore</a>
+                      </li>
+                      <li class="footer-author-place-item">
+                        <a href="https://shopee.co.id" class="footer-author-place-link">Indonesia</a>
+                      </li>
+                      <li class="footer-author-place-item">
+                        <a href="https://shopee.tw" class="footer-author-place-link">Đài Loan</a>
+                      </li>
+                      <li class="footer-author-place-item">
+                        <a href="https://shopee.co.th" class="footer-author-place-link">Thái Lan</a>
+                      </li>
+                      <li class="footer-author-place-item">
+                        <a href="https://shopee.com.my" class="footer-author-place-link">Malaysia</a>
+                      </li>
+                      <li class="footer-author-place-item">
+                        <a href="https://shopee.vn" class="footer-author-place-link">Việt Nam</a>
+                      </li>
+                      <li class="footer-author-place-item">
+                        <a href="https://shopee.ph" class="footer-author-place-link">Philippines</a>
+                      </li>
+                      <li class="footer-author-place-item">
+                        <a href="https://shopee.com.br" class="footer-author-place-link">Brazil</a>
+                      </li>
+                      <li class="footer-author-place-item">
+                        <a href="https://shopee.com.mx" class="footer-author-place-link">México</a>
+                      </li>
+                      <li class="footer-author-place-item">
+                        <a href="https://shopee.com.co" class="footer-author-place-link">Colombia</a>
+                      </li>
+                      <li class="footer-author-place-item">
+                        <a href="https://shopee.cl" class="footer-author-place-link">Chile</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
