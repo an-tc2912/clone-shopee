@@ -7,7 +7,7 @@
   --star-gold-color: #ffce3d;
   --voucher-primary-color: #f69113;
   --facebook-icon-color: #1877f2;
-  --font-family-primary: 'Roboto', sans-serif;
+  --font-family-primary: "Roboto", sans-serif;
   --font-size-primary: 1.5rem;
   --font-size-2xs: 0.7rem;
   --font-size-xs: 1rem;
@@ -58,7 +58,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   line-height: 1.6rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -76,20 +76,20 @@ body {
 }
 
 .grid__column-2 {
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 16.6667%;
 }
 
 .grid__column-2-4 {
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 20%;
 }
 
 .grid__column-10 {
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 83.3333%;
 }
 
@@ -129,8 +129,8 @@ body {
   position: absolute;
   background-color: var(--white-color);
   color: var(--text-color);
-  box-shadow: 0 .1rem .2rem 0 rgba(0, 0, 0, 0.3);
-  border-radius: .2rem;
+  box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.3);
+  border-radius: 0.2rem;
   transform: scale(0);
   opacity: 0;
   transition: all 0.3s;
@@ -169,7 +169,7 @@ body {
   height: 3.4rem;
   text-decoration: none;
   border: none;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   font-size: 1.5rem;
   padding: 0 1.2rem;
   outline: none;
@@ -190,7 +190,7 @@ body {
 .btn.btn--size-s {
   height: 3.2rem;
   font-size: 1.2rem;
-  padding: 0 .8rem;
+  padding: 0 0.8rem;
 }
 
 .btn.btn--primary {
@@ -208,7 +208,7 @@ body {
 .select-input {
   height: 3.4rem;
   padding: 0 1.2rem;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   background-color: var(--white-color);
   min-width: 20rem;
   display: flex;
@@ -220,13 +220,12 @@ body {
 
 .select-input__label {
   font-size: 1.4rem;
-
 }
 
 .select-input__label-icon {
   font-size: 1.4rem;
   position: relative;
-  top: .1rem;
+  top: 0.1rem;
   color: rgb(85, 85, 85);
 }
 
@@ -235,10 +234,10 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(100% + .1rem);
-  border-radius: .2rem;
+  top: calc(100% + 0.1rem);
+  border-radius: 0.2rem;
   background-color: var(--white-color);
-  box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, .05);
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.05);
   z-index: 12;
   padding: 1rem 0;
   display: none;
@@ -251,13 +250,12 @@ body {
 .select-input__item {
   display: flex;
   align-items: center;
-
 }
 
 .select-input__link {
   text-decoration: none;
   color: var(--text-color);
-  padding: .7rem 1.6rem;
+  padding: 0.7rem 1.6rem;
   font-size: 1.4rem;
   font-weight: 400;
 }

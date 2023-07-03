@@ -28,7 +28,7 @@
         left: 0;
         width: 100%;
         min-width: 100%;
-        padding: 0 calc((100% - 644px) /2);
+        padding: 0 calc((100% - 644px) / 2);
     }
 
     .header-cart-list::before {
@@ -200,5 +200,4 @@
     .footer-author__info {
         font-size: var(--font-size-s);
     }
-
 }
