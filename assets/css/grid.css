@@ -1,6 +1,6 @@
 .grid {
-  width: 100%;
   display: block;
+  width: 100%;
   padding: 0;
 }
 
@@ -12,23 +12,23 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -4px;
   margin-right: -4px;
+  margin-left: -4px;
 }
 
 .row.no-gutters {
-  margin-left: 0;
   margin-right: 0;
+  margin-left: 0;
 }
 
 .col {
-  padding-left: 4px;
   padding-right: 4px;
+  padding-left: 4px;
 }
 
 .row.no-gutters .col {
-  padding-left: 0;
   padding-right: 0;
+  padding-left: 0;
 }
 
 .c-0 {
@@ -142,13 +142,13 @@
 /* >= Tablet */
 @media (min-width: 46.25em) {
   .row {
-    margin-left: -8px;
     margin-right: -8px;
+    margin-left: -8px;
   }
 
   .col {
-    padding-left: 8px;
     padding-right: 8px;
+    padding-left: 8px;
   }
 
   .m-0 {
@@ -278,23 +278,23 @@
 /* PC medium resolution > */
 @media (min-width: 69.5625em) {
   .row {
-    margin-left: -12px;
     margin-right: -12px;
+    margin-left: -12px;
   }
 
   .row.sm-gutter {
-    margin-left: -5px;
     margin-right: -5px;
+    margin-left: -5px;
   }
 
   .col {
-    padding-left: 12px;
     padding-right: 12px;
+    padding-left: 12px;
   }
 
   .row.sm-gutter .col {
-    padding-left: 5px;
     padding-right: 5px;
+    padding-left: 5px;
   }
 
   .l-0 {
@@ -441,23 +441,23 @@
   }
 
   .wide .row {
-    margin-left: -12px;
     margin-right: -12px;
+    margin-left: -12px;
   }
 
   .wide .row.sm-gutter {
-    margin-left: -5px;
     margin-right: -5px;
+    margin-left: -5px;
   }
 
   .wide .col {
-    padding-left: 12px;
     padding-right: 12px;
+    padding-left: 12px;
   }
 
   .wide .row.sm-gutter .col {
-    padding-left: 5px;
     padding-right: 5px;
+    padding-left: 5px;
   }
 
   .wide .l-0 {
