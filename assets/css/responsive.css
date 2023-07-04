@@ -1,6 +1,5 @@
 /* PC */
-@media (min-width: 46.25em) {
-
+@media (width >= 46.25em) {
   /* Hide elements on PC */
   .hide-on-pc {
     display: none;
@@ -8,8 +7,7 @@
 }
 
 /* Mobile & Tablet */
-@media (max-width: 63.9375em) {
-
+@media (width <= 63.9375em) {
   /* Hide elements on mobile and tablet */
   .hide-on-mobile-tablet {
     display: none;
@@ -48,8 +46,7 @@
 }
 
 /* Tablet */
-@media (min-width: 46.25em) and (max-width: 63.9375em) {
-
+@media (width >= 46.25em) and (width <= 63.9375em) {
   /* Set variables for tablet */
   :root {
     --header-height: 86px;
@@ -67,8 +64,7 @@
 }
 
 /* Mobile */
-@media (max-width: 46.1875em) {
-
+@media (width <= 46.1875em) {
   /* Set variables for mobile */
   :root {
     --header-height: 60px;
@@ -90,13 +86,26 @@
     width: 110px;
   }
 
-  /* Header search*/
+  /* Header search */
   .header-with-search {
     padding: 0 16px;
   }
 
   .header-search-section {
+    position: fixed;
+    top: calc(var(--header-height) - 1px);
+    right: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
     width: auto;
+    height: var(--header-sort-bar-height);
+    padding: 0 26px 0 16px;
+    background-color: var(--white-color);
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 0.1);
+    animation: mobileSearchSideIn linear 0.3s;
   }
 
   .header-logo-link {
@@ -116,22 +125,6 @@
     margin-right: 6px;
   }
 
-  .header-search-section {
-    position: fixed;
-    top: calc(var(--header-height) - 1px);
-    right: 0;
-    left: 0;
-    z-index: 10;
-    display: none;
-    height: var(--header-sort-bar-height);
-    padding: 0 26px 0 16px;
-    background-color: var(--white-color);
-    border-top: 1px solid var(--primary-color);
-    border-bottom: 1px solid var(--primary-color);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    animation: mobileSearchSideIn linear 0.3s;
-  }
-
   @keyframes mobileSearchSideIn {
     from {
       top: calc(var(--header-height) / 2);
@@ -149,7 +142,7 @@
     top: calc(var(--header-height) + var(--header-sort-bar-height));
     left: 0;
     width: 100%;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
   }
 
   .header-search-wrapper {
